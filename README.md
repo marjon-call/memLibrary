@@ -23,10 +23,20 @@ import "memlibrary/src/mem.sol";
 
 ### Deployment
 
-Since this library uses ```public``` functions, which take advantage of ```delegatecall()```, users must deploy the library with their contract. 
-The following code demonstartes how to do so:
+Since this library uses ```public``` functions, which take advantage of ```delegatecall()```, users must deploy the library with their contract. I have already deployed the library to Ethereum Mainnet at the following address: ```0x0fd9bbF9e7855F045442A3D571F81a9308706ff6```. To utilize this library on mainnet use the following code when deploying your smart contract:
 ```
-const Mem = await ethers.getContractFactory("mem");
+    const YourContract = await ethers.getContractFactory("YourContract", {
+      libraries: {
+        mem: 0x0fd9bbF9e7855F045442A3D571F81a9308706ff6
+      },
+    });
+    const yourContract = await YourContract.deploy();
+    await yourContract.deployed();
+```
+
+If you would like to use this library outside of Ethereum mainnet, you will have tot deply the library yourself. The following code demonstartes how to do so:
+```
+    const Mem = await ethers.getContractFactory("mem");
     const mem = await Mem.deploy();
     await mem.deployed();
 
