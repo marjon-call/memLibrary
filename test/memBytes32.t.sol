@@ -26,15 +26,17 @@ contract MemTest is Test {
         arr[2] = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db;
         arr[3] = 0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB;
 
-        arr = mem.push(arr, 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4);
-        arr = mem.push(arr, 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2);
-
+       
 
         address[] memory _arr2 = arr2;
 
         address[] memory arr3 = new address[](1);
 
         arr3[0] = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db;
+
+        arr = mem.push(arr, 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4);
+        arr = mem.push(arr, 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2);
+
 
 
         TestStruct memory ts = TestStruct(0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB,0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB);
@@ -72,8 +74,7 @@ contract MemTest is Test {
         arr[2] = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db;
         arr[3] = 0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB;
 
-        arr = mem.pop(arr);
-        arr = mem.pop(arr);
+       
 
         
         address[] memory _arr2 = arr2;
@@ -81,6 +82,9 @@ contract MemTest is Test {
         address[] memory arr3 = new address[](1);
 
         arr3[0] = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db;
+
+        arr = mem.pop(arr);
+        arr = mem.pop(arr);
 
 
         TestStruct memory ts = TestStruct(0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB,0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB);
@@ -117,8 +121,7 @@ contract MemTest is Test {
         arr[2] = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db;
         arr[3] = 0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB;
 
-        arr = mem.insert(arr, address(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4), 1);
-        arr = mem.insert(arr, address(0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2), 5);
+        
 
 
         address[] memory _arr2 = arr2;
@@ -126,6 +129,9 @@ contract MemTest is Test {
         address[] memory arr3 = new address[](1);
 
         arr3[0] = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db;
+
+        arr = mem.insert(arr, address(0x5B38Da6a701c568545dCfcB03FcB875f56beddC4), 1);
+        arr = mem.insert(arr, address(0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2), 5);
 
 
         TestStruct memory ts = TestStruct(0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB,0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB);
@@ -163,15 +169,15 @@ contract MemTest is Test {
         arr[2] = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db;
         arr[3] = 0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB;
 
-        arr = mem.remove(arr, 0);
-        arr = mem.remove(arr, 1);
-
 
         address[] memory _arr2 = arr2;
 
         address[] memory arr3 = new address[](1);
 
         arr3[0] = 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db;
+
+        arr = mem.remove(arr, 0);
+        arr = mem.remove(arr, 1);
 
 
         TestStruct memory ts = TestStruct(0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB,0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB);
