@@ -26,9 +26,6 @@ contract MemTest is Test {
         arr[2] = true;
         arr[3] = false;
 
-        arr = mem.push(arr, true);
-        arr = mem.push(arr, false);
-
 
         bool[] memory _arr2 = arr2;
 
@@ -36,10 +33,12 @@ contract MemTest is Test {
 
         arr3[0] = true;
 
+        arr = mem.push(arr, true);
+        arr = mem.push(arr, false);
+
 
         TestStruct memory ts = TestStruct(false,true);
 
-        
         assertEq(arr.length, 6);
 
         assertEq(arr[0], true);
@@ -72,8 +71,7 @@ contract MemTest is Test {
         arr[2] = true;
         arr[3] = false;
 
-        arr = mem.pop(arr);
-        arr = mem.pop(arr);
+        
 
 
         bool[] memory _arr2 = arr2;
@@ -81,6 +79,9 @@ contract MemTest is Test {
         bool[] memory arr3 = new bool[](1);
 
         arr3[0] = true;
+
+        arr = mem.pop(arr);
+        arr = mem.pop(arr);
 
 
         TestStruct memory ts = TestStruct(false,true);
@@ -115,8 +116,7 @@ contract MemTest is Test {
         arr[2] = true;
         arr[3] = false;
 
-        arr = mem.insert(arr, true, 1);
-        arr = mem.insert(arr, false, 5);
+        
 
 
         bool[] memory _arr2 = arr2;
@@ -125,6 +125,8 @@ contract MemTest is Test {
 
         arr3[0] = true;
 
+        arr = mem.insert(arr, true, 1);
+        arr = mem.insert(arr, false, 5);
 
         TestStruct memory ts = TestStruct(false,true);
 
@@ -160,8 +162,7 @@ contract MemTest is Test {
         arr[2] = true;
         arr[3] = false;
 
-        arr = mem.remove(arr, 0);
-        arr = mem.remove(arr, 1);
+        
 
 
         bool[] memory _arr2 = arr2;
@@ -170,6 +171,8 @@ contract MemTest is Test {
 
         arr3[0] = true;
 
+        arr = mem.remove(arr, 0);
+        arr = mem.remove(arr, 1);
 
         TestStruct memory ts = TestStruct(false,true);
 

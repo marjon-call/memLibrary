@@ -26,8 +26,7 @@ contract MemTest is Test {
         arr[2] = 2;
         arr[3] = 3;
 
-        arr = mem.push(arr, 4);
-        arr = mem.push(arr, 5);
+        
 
 
         int8[] memory _arr2 = arr2;
@@ -35,6 +34,9 @@ contract MemTest is Test {
         int8[] memory arr3 = new int8[](1);
 
         arr3[0] = 11;
+
+        arr = mem.push(arr, 4);
+        arr = mem.push(arr, 5);
 
 
         TestStruct memory ts = TestStruct(1,2);
@@ -72,8 +74,7 @@ contract MemTest is Test {
         arr[2] = 2;
         arr[3] = 3;
 
-        arr = mem.pop(arr);
-        arr = mem.pop(arr);
+        
 
 
         int8[] memory _arr2 = arr2;
@@ -81,6 +82,9 @@ contract MemTest is Test {
         int8[] memory arr3 = new int8[](1);
 
         arr3[0] = 11;
+
+        arr = mem.pop(arr);
+        arr = mem.pop(arr);
 
 
         TestStruct memory ts = TestStruct(1,2);
@@ -115,15 +119,16 @@ contract MemTest is Test {
         arr[2] = 2;
         arr[3] = 3;
 
-        arr = mem.insert(arr, 4, 1);
-        arr = mem.insert(arr, 5, 5);
-
+        
 
         int8[] memory _arr2 = arr2;
 
         int8[] memory arr3 = new int8[](1);
 
         arr3[0] = 11;
+
+        arr = mem.insert(arr, 4, 1);
+        arr = mem.insert(arr, 5, 5);
 
 
         TestStruct memory ts = TestStruct(1,2);
@@ -160,8 +165,7 @@ contract MemTest is Test {
         arr[2] = 2;
         arr[3] = 3;
 
-        arr = mem.remove(arr, 0);
-        arr = mem.remove(arr, 1);
+        
 
 
         int8[] memory _arr2 = arr2;
@@ -169,6 +173,9 @@ contract MemTest is Test {
         int8[] memory arr3 = new int8[](1);
 
         arr3[0] = 11;
+
+        arr = mem.remove(arr, 0);
+        arr = mem.remove(arr, 1);
 
 
         TestStruct memory ts = TestStruct(1,2);

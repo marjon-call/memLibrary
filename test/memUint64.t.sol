@@ -26,8 +26,7 @@ contract MemTest is Test {
         arr[2] = 2;
         arr[3] = 3;
 
-        arr = mem.push(arr, 4);
-        arr = mem.push(arr, 5);
+        
 
 
         uint64[] memory _arr2 = arr2;
@@ -35,6 +34,9 @@ contract MemTest is Test {
         uint64[] memory arr3 = new uint64[](1);
 
         arr3[0] = 11;
+
+        arr = mem.push(arr, 4);
+        arr = mem.push(arr, 5);
 
 
         TestStruct memory ts = TestStruct(1,2);
@@ -72,15 +74,17 @@ contract MemTest is Test {
         arr[2] = 2;
         arr[3] = 3;
 
-        arr = mem.pop(arr);
-        arr = mem.pop(arr);
-
+        
 
         uint64[] memory _arr2 = arr2;
 
         uint64[] memory arr3 = new uint64[](1);
 
         arr3[0] = 11;
+
+        arr = mem.pop(arr);
+        arr = mem.pop(arr);
+
 
 
         TestStruct memory ts = TestStruct(1,2);
@@ -115,8 +119,7 @@ contract MemTest is Test {
         arr[2] = 2;
         arr[3] = 3;
 
-        arr = mem.insert(arr, 4, 1);
-        arr = mem.insert(arr, 5, 5);
+        
 
 
         uint64[] memory _arr2 = arr2;
@@ -124,6 +127,9 @@ contract MemTest is Test {
         uint64[] memory arr3 = new uint64[](1);
 
         arr3[0] = 11;
+
+        arr = mem.insert(arr, 4, 1);
+        arr = mem.insert(arr, 5, 5);
 
 
         TestStruct memory ts = TestStruct(1,2);
@@ -160,8 +166,7 @@ contract MemTest is Test {
         arr[2] = 2;
         arr[3] = 3;
 
-        arr = mem.remove(arr, 0);
-        arr = mem.remove(arr, 1);
+        
 
 
         uint64[] memory _arr2 = arr2;
@@ -169,6 +174,9 @@ contract MemTest is Test {
         uint64[] memory arr3 = new uint64[](1);
 
         arr3[0] = 11;
+
+        arr = mem.remove(arr, 0);
+        arr = mem.remove(arr, 1);
 
 
         TestStruct memory ts = TestStruct(1,2);
